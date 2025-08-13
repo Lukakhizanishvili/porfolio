@@ -46,3 +46,7 @@ nav{
     font-size: 2rem;
     font-weight: bold;
 }
+.logo span{
+    color: #b74b4b;
+    text-shadow: 0 0 10px #b74b4b;
+}
