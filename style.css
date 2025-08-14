@@ -417,3 +417,21 @@ section .button button:hover{
     text-align: center;
     margin: auto;
 }
+footer{
+    background:#b74b4b;
+    padding: 15px 0;
+    text-align: center;
+    font-family: sans-serif;
+}
+footer .text .span{
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+}
+footer .text span a{
+    font-weight: 500;
+    color: #fff;
+}
+footer .text span a:hover{
+    text-decoration: underline;
+}
