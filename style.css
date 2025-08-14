@@ -333,17 +333,37 @@ section .button button:hover{
     font-weight: 500;
     margin: 0 6px;
 }
-.boxes{
+.container-flex .boxes{
     width: 45%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.box{
+.container-flex .box{
     width: calc(100% / 2 - 20px);
     margin: 20px 0;
 }
-.boxes .topic{
+.container-flex .boxes .topic{
     font-size: 20px;
     color:#b74b4b;
+}
+.container-flex .boxes .per{
+    font-size: 60px;
+    color: #b74b4b;
+}
+.services .boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.services .boxes .box{
+    margin: 20px 0;
+    width: calc(100% / 3 - 20px);
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+    cursor: default;
+    color: white;
+    transition: all 0.4s ease;
 }
