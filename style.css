@@ -262,3 +262,68 @@ section .title span::after{
     object-fit: cover;
     border-radius: 12px;
 }
+.about-details .right{
+    width: 55%;
+}
+
+section .topic{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.about-details .right p{
+    text-align: justify;
+    color: white;
+}
+section .button{
+    margin: 16px 0;
+}
+section .button button{
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: #b74b4b;
+    color: #fff;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+section .button button:hover{
+    border-color: #b74b4b;
+    background-color: #fff;
+    color: #b74b4b;
+}
+.skills{
+    background:black;
+}
+.skills .content{
+    padding: 40px 0;
+}
+.skills .skills-details{
+    
+    width: 45%;
+}
+.container-flex{
+    display: flex;
+    justify-content: space-around;
+}
+.skills-details .text{
+    width: 50%;
+}
+.skills-details p{
+    color: white;
+    text-align: justify;
+}
+.container-flex .skills-details .experience{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+.skills-details .experience .num{
+    color: white;
+    font-size: 80px;
+}
+
