@@ -159,7 +159,7 @@ section .main-container{
     color: #b74b4b;
     text-shadow: 0 0 10px #b74b4b;
 }
-.content .typewriter{
+.content .typewrite{
     font-size: clamp(1rem, 1rem + 5vw,2.5rem);
     font-weight: 600;
 }
@@ -326,4 +326,24 @@ section .button button:hover{
     color: white;
     font-size: 80px;
 }
-
+.skills-details .experience .exp{
+    color: white;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 6px;
+}
+.boxes{
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.box{
+    width: calc(100% / 2 - 20px);
+    margin: 20px 0;
+}
+.boxes .topic{
+    font-size: 20px;
+    color:#b74b4b;
+}
