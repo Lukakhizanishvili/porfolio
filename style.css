@@ -487,9 +487,13 @@ footer .text span a:hover{
     }
     section .main-container .image{
         width: 400px;
-        height: 40vh;
+        height: auto;
     }
     .nav-container .links{
         display: none;
     }
+    .hamburg,
+    .cancel{
+        opacity: 1;
+        pointer-events: visible;
 }
