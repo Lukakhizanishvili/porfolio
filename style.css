@@ -80,7 +80,7 @@ nav{
     left: 0;
     width: 0%;
     height: 3px;
-    background-color: #b74b4b;
+    /* background-color: #b74b4b; */
     transition: 0.2s linear;
 }
 .nav-container .links a::before{
