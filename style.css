@@ -204,3 +204,11 @@ section .main-container{
     border-radius: 5px;
     transition: 0.2s linear;
 }
+.content button:hover{
+    scale: 1.1;
+    color: #b74b4b;
+    border: 2px solid #b74b4b;
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px #b74b4b;
+}
