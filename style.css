@@ -375,3 +375,33 @@ section .button button:hover{
     color: white;
     transition: all 0.4s ease;
 }
+.services .boxes .box:hover{
+    background: #b74b4b;
+    color: #fff;
+}
+.services .boxes .box .icon{
+   height: 50px; 
+   width: 50px;
+   background: #b74b4b;
+   border-radius: 50%;
+   text-align: center;
+   line-height: 50px;
+   font-size: 18px;
+   color: #fff;
+   margin: 0 auto 10px auto;
+   transition: all 0.4s ease;
+}
+.boxes .box:hover .icon{
+    background-color: #fff;
+    color: #b74b4b;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+    color: #fff;
+}
