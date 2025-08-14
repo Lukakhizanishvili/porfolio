@@ -534,4 +534,24 @@ footer .text span a:hover{
     margin: 20px 0;
     width: 100%;
 }
+.contact .text{
+    width: 100%;
+}
+}
+@media(max-width:500px){
+    .main-container .image{
+        width: 50%;
+        height: 60%;
+        margin-bottom: 0px;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .main-container .button{
+        margin-top: 15px;
+    }
+    .skills-details .boxes .per{
+        font-size: 50px;
+        color: #b74b4b;
+    }
 }
