@@ -123,8 +123,8 @@ section .main-container{
     align-items: center;
 }
 .main-container .image{
-    width: 500px;
-    height: 80vh;
+    width: 600px;
+    height: 64vh;
     border-radius: 100%;
     overflow: hidden;
     box-shadow: 0 0 50px #b74b4b;
@@ -260,10 +260,15 @@ section .title span::after{
     height: 400px;
     width: 400px;
     object-fit: cover;
-    border-radius: 12px;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 25%;
 }
+
 .about-details .right{
-    width: 55%;
+    width: 45%;
 }
 
 section .topic{
@@ -275,6 +280,7 @@ section .topic{
 .about-details .right p{
     text-align: justify;
     color: white;
+    width: 50%;
 }
 section .button{
     margin: 16px 0;
