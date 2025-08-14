@@ -512,9 +512,11 @@ footer .text span a:hover{
     height: 60%;
 }
 .about .left img{
-    height: 40vh;
-    width: 400px;
+    height: 25vh;
+    width: 300px;
+    margin-right: 25%;
 }
+
 .container-flex{
     align-items: center;
     justify-content: center;
@@ -564,5 +566,11 @@ footer .text span a:hover{
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+    .section .button button{
+        width: 100px;
+        font-size: 8px;
+        font-weight: 200;
+
     }
 }
