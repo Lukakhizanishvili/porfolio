@@ -586,12 +586,12 @@ footer .text span a:hover{
     font-size: 25px;
 }
 }
-@media(max-width:500px){
+@media(max-width:400px){
     .btn{
    margin-left: 5%; 
 }
    .boxes {
-            width: 500px;
+            width: 400px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
