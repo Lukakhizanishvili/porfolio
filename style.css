@@ -365,6 +365,7 @@ section .button button:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    flex-direction: row;
 }
 .container-flex .box{
     width: calc(100% / 2 - 20px);
@@ -586,6 +587,36 @@ footer .text span a:hover{
 }
 }
 @media(max-width:500px){
+   .boxes {
+            width: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex-direction: row;
+            background-color: #000;
+            padding: 20px;
+        }
+
+        .box {
+            width: calc(50% - 20px); /* 50% თითოეულ ხაზზე, მინუს მარჯინი */
+            margin: 20px 10px;
+            box-sizing: border-box;
+            border: 2px solid #fff; /* ჩარჩო სურათის მსგავსად */
+            text-align: center;
+            padding: 20px; /* შიგნით სივრცე teksti-სთვის */
+        }
+
+        .box .topic {
+            font-size: 20px;
+            color: #b74b4b;
+            margin-bottom: 10px;
+        }
+
+        .box .per {
+            font-size: 60px;
+            color: #b74b4b;
+        }
+    /* საასასსაას */
     .content button {
         width: 80%;
     }
