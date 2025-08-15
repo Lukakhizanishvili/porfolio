@@ -92,13 +92,32 @@ nav{
 .dropdown{
     z-index: 100;
     position: absolute;
-    top: 0;
-    transform: translateY(-500px);
+    top: 0; left: 0;
     width: 100%;
     height: auto;
     backdrop-filter: blur(4px) brightness(40%);
     box-shadow: 0 0 20px black;
-    transition: 0.2s linear;
+
+    /* დაიმალოს დეფოლტად */
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: transform .25s ease, opacity .25s ease;
+}
+
+.dropdown.open{
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+.menu {
+  display: none; /* დამალულია ნაგულისხმევად */
+  list-style: none;
+}
+
+.menu.show {
+  display: block; /* გამოჩნდება როცა class="show" დაემატება */
 }
 .dropdown .links a{
     display: flex;
@@ -542,6 +561,15 @@ footer .text span a:hover{
 }
 .contact .text{
     width: 100%;
+}
+/* Hidden by default */
+.dropdown {
+    display: none;
+}
+
+/* Show when active */
+.dropdown.active {
+    display: block;
 }
 }
 @media(max-width:500px){

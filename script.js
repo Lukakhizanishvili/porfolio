@@ -1,3 +1,4 @@
+// there is to mail code
 document.getElementById("contactMeJs").addEventListener("click", function(){
     const TO = "lukakhizanishvili0@gmail.com";
     const SUBJECT = "მსურს პროექტის შექმნა";
@@ -7,3 +8,41 @@ document.getElementById("contactMeJs").addEventListener("click", function(){
     window.location.href = url;
 
 })
+
+
+
+// for burger dropdown
+
+// script.js
+const dropdown = document.querySelector('.dropdown');
+const burger   = document.querySelector('.hamburg');
+const cancel   = document.querySelector('.cancel');
+
+function hamburg() {
+  const willOpen = !dropdown.classList.contains('open');
+  dropdown.classList.toggle('open', willOpen);
+
+  // გარედან ბურგერის აიკონის შეცვლა (bars <-> x)
+  burger.classList.toggle('fa-bars', !willOpen);
+  burger.classList.toggle('fa-xmark', willOpen);
+
+  // Body scroll lock როცა მენიუ ღიაა (სურვილისამებრ)
+  document.body.style.overflow = willOpen ? 'hidden' : '';
+}
+
+// რომ inline onclick იპოვოს ფუნქცია ყველგან
+window.hamburg = hamburg;
+
+// მენიუს ლინკზე დაჭერითაც დაიკეტოს
+document.querySelectorAll('.dropdown .links a')
+  .forEach(a => a.addEventListener('click', () => dropdown.classList.remove('open')));
+
+
+  function hamburg() {
+  const icon = document.querySelector(".hamburg");
+  const menu = document.getElementById("menu");
+
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-times");
+  menu.classList.toggle("show"); // აქ ვაჩვენებთ ან ვმალავთ
+}
