@@ -577,7 +577,7 @@ footer .text span a:hover{
     margin-top: 10%;
 }
 .btn{
-   margin-left: 25%; 
+   margin-left: 20%; 
 }
 .typewrite label{
     font-size: 25px;
@@ -587,6 +587,9 @@ footer .text span a:hover{
 }
 }
 @media(max-width:500px){
+    .btn{
+   margin-left: 5%; 
+}
    .boxes {
             width: 500px;
             display: flex;
@@ -601,7 +604,6 @@ footer .text span a:hover{
             width: calc(50% - 20px); /* 50% თითოეულ ხაზზე, მინუს მარჯინი */
             margin: 20px 10px;
             box-sizing: border-box;
-            border: 2px solid #fff; /* ჩარჩო სურათის მსგავსად */
             text-align: center;
             padding: 20px; /* შიგნით სივრცე teksti-სთვის */
         }
