@@ -52,7 +52,7 @@ document.querySelectorAll('.dropdown .links a')
 
 
   const textElement = document.getElementById("intensText");
-        const words = ["Web-Developer", "Troubleshooter", "Programmist"];
+        const words = ["ვებ-დეველოპერი", "თრაბელშუთერი", "პროგრამისტი"];
         let index = 0;
 
         setInterval(() => {
