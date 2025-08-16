@@ -656,9 +656,14 @@ footer .text span a:hover{
 
 
 @media(max-width:400px){
+    .social-links{
+        width: 100%;
+        margin-left: 5%;
+    }
+    }
     .btn{
-   margin-left: 5%; 
-}
+    margin-left: 5%; 
+    }
    .boxes {
             width: 400px;
             display: flex;
