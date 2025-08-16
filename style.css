@@ -602,7 +602,7 @@ footer .text span a:hover{
    margin-left: 5%; 
 }
    .boxes {
-            width: 400px;
+            width: 500px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -628,6 +628,29 @@ footer .text span a:hover{
         .box .per {
             font-size: 60px;
             color: #b74b4b;
+        }
+        .about .about-details .left {
+        display: flex;
+        justify-content: center;
+        width: 88%;
+        }
+        section .topic {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        margin-left: 10%;
+        } 
+        .about-details .right p {
+        text-align: justify;
+        color: white;
+        width: 83%;
+        }
+        .skills .skills-details {
+            width: 80%;
+        }   
+        .container-flex .skills-details .experience {
+            display: none;
         }
     /* საასასსაას */
     .content button {
