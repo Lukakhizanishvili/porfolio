@@ -46,3 +46,16 @@ document.querySelectorAll('.dropdown .links a')
   icon.classList.toggle("fa-times");
   menu.classList.toggle("show"); // აქ ვაჩვენებთ ან ვმალავთ
 }
+
+// there's move text
+
+
+
+  const textElement = document.getElementById("intensText");
+        const words = ["Web-Developer", "Troubleshooter", "Programmist"];
+        let index = 0;
+
+        setInterval(() => {
+            index = (index + 1) % words.length; // ციკლური გადასვლა მასივზე
+            textElement.innerHTML = `<span class="highlight">${words[index]}</span>`;
+        }, 1500); // 2 წამი ყოველ გადასვლას
