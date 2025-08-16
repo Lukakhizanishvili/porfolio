@@ -916,3 +916,141 @@ footer .text span a:hover{
         pointer-events: none;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* ბურგერი დაკორექტირებული */
+/* nav-bar styling */
+nav {
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #b74b4b;
+    text-shadow: 0 0 10px #b74b4b;
+}
+
+.hamburg,
+.cancel {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+    z-index: 1001;
+    display: none; /* საწყისად დაფარული ყველგან */
+}
+
+.nav-container .links {
+    display: flex;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #b74b4b;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+.nav-container .links a:hover {
+    color: #b74b4b;
+}
+
+.dropdown {
+    z-index: 1000;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px black;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    display: none; /* დაფარული საწყისად */
+}
+
+.dropdown.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    display: block; /* გახსნისას ჩანს */
+}
+
+.dropdown .links a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+    background-color: #b74b4b;
+}
+
+/* მედია კვირები */
+@media (max-width: 968px) {
+    .nav-container .links {
+        display: none;
+    }
+    .hamburg {
+        display: block; /* ჩანს მხოლოდ 968px-ზე და ქვემოთ */
+    }
+    .cancel {
+        display: none; /* საწყისად დაფარული */
+    }
+    .dropdown {
+        display: none; /* დაფარული, სანამ JavaScript არ გააქტივებს */
+    }
+}

@@ -26,12 +26,12 @@ function hamburg() {
 
     if (dropdown.classList.contains('open')) {
         dropdown.classList.remove('open');
-        hamburg.classList.remove('hidden');
-        cancel.classList.add('hidden');
+        hamburg.style.display = 'block';
+        cancel.style.display = 'none';
     } else {
         dropdown.classList.add('open');
-        hamburg.classList.add('hidden');
-        cancel.classList.remove('hidden');
+        hamburg.style.display = 'none';
+        cancel.style.display = 'block';
     }
 }
 
