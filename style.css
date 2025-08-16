@@ -586,6 +586,75 @@ footer .text span a:hover{
     font-size: 25px;
 }
 }
+
+
+@media(max-width:500px){
+    .btn{
+   margin-left: 5%; 
+}
+   .boxes {
+            width: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex-direction: row;
+            background-color: #000;
+            padding: 20px;
+        }
+
+        .box {
+            width: calc(50% - 20px); /* 50% თითოეულ ხაზზე, მინუს მარჯინი */
+            margin: 20px 10px;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 20px; /* შიგნით სივრცე teksti-სთვის */
+        }
+
+        .box .topic {
+            font-size: 20px;
+            color: #b74b4b;
+            margin-bottom: 10px;
+        }
+
+        .box .per {
+            font-size: 60px;
+            color: #b74b4b;
+        }
+    /* საასასსაას */
+    .content button {
+        width: 80%;
+    }
+    .main-container .image{
+        width: 50%;
+        height: 60%;
+        margin-bottom: 0px;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .main-container .button{
+        margin-top: 15px;
+    }
+    .skills-details .boxes .per{
+        font-size: 50px;
+        color: #b74b4b;
+    }
+    .about-details .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .section .button button{
+        width: 100px;
+        font-size: 8px;
+        font-weight: 200;
+
+    }
+}
+
+
 @media(max-width:400px){
     .btn{
    margin-left: 5%; 
