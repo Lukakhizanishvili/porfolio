@@ -733,22 +733,5 @@ footer .text span a:hover{
         font-weight: 200;
 
     }
-    section .topic {
-    color: white;
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 10px;
-    margin-left: 10%;
 }
-.about-details .right p {
-    text-align: center;
-    color: white;
-    width: 88%;
-}
-.skills .skills-details {
-    width: 80%;
-}
-.container-flex .skills-details .experience {
-    display: none;
-}
-}
+
