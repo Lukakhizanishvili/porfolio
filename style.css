@@ -182,7 +182,7 @@ section .main-container{
     width: 40%;
 }
 .content h1{
-    font-size: clamp(1rem, 1rem + 5vw,1.8rem);
+    /* font-size: clamp(1rem, 1rem + 5vw,1.8rem); */
 }
 .content h1 span{
     color: #b74b4b;
@@ -751,4 +751,7 @@ footer .text span a:hover{
 .container-flex .skills-details .experience {
     display: none;
 }
+.typewrite label {
+        font-size: 18px;
+    }
 }
