@@ -11,7 +11,7 @@ document.getElementById("contactMeJs").addEventListener("click", function () {
 // WhatsApp-ის ღილაკის ფუნქცია
 document.getElementById("whatsappButton").addEventListener("click", function () {
     const phoneNumber = "+995555455007"; // შეცვალეთ თქვენი ნომრით
-    const message = encodeURIComponent("გამარჯობა, მსურს პროექტის შესახებ გ dialogue");
+    const message = encodeURIComponent("გამარჯობა, მსურს პროექტის შესახებ გასაუბრება");
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.location.href = whatsappUrl;
