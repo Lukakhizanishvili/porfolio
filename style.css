@@ -56,8 +56,10 @@ nav {
 
 .logo {
     color: white;
-    font-size: 2rem;
     font-weight: bold;
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
 }
 
 .logo span {
