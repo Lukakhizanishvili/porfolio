@@ -715,7 +715,7 @@ footer .text span a:hover{
    margin-left: 5%; 
 }
    .boxes {
-            width: 500px;
+            width: auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
