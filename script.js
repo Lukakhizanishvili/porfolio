@@ -28,6 +28,23 @@ setInterval(() => {
 }, 1500);
 
 // ბურგერ მენუ
+// function hamburg() {
+//     const dropdown = document.querySelector('.dropdown');
+//     const hamburg = document.querySelector('.hamburg');
+//     const cancel = document.querySelector('.cancel');
+
+//     if (dropdown.classList.contains('open')) {
+//         dropdown.classList.remove('open');
+//         hamburg.style.display = 'block';
+//         cancel.style.display = 'none';
+//     } else {
+//         dropdown.classList.add('open');
+//         hamburg.style.display = 'none';
+//         cancel.style.display = 'block';
+//     }
+// }
+
+// ბურგერ მენუ
 function hamburg() {
     const dropdown = document.querySelector('.dropdown');
     const hamburg = document.querySelector('.hamburg');
@@ -35,11 +52,35 @@ function hamburg() {
 
     if (dropdown.classList.contains('open')) {
         dropdown.classList.remove('open');
-        hamburg.style.display = 'block';
-        cancel.style.display = 'none';
+        hamburg.style.opacity = '1'; // ბურგერი ხელახლა ჩანს
+        hamburg.style.pointerEvents = 'auto';
+        cancel.style.opacity = '0'; // იქსი გაქრეს
+        cancel.style.pointerEvents = 'none';
     } else {
         dropdown.classList.add('open');
-        hamburg.style.display = 'none';
-        cancel.style.display = 'block';
+        hamburg.style.opacity = '0'; // ბურგერი გაქრეს
+        hamburg.style.pointerEvents = 'none';
+        cancel.style.opacity = '1'; // იქსი ჩანს
+        cancel.style.pointerEvents = 'auto';
     }
 }
+
+// ეკრანის ზომის შემოწმება
+function checkScreenSize() {
+    const hamburg = document.querySelector('.hamburg');
+    const cancel = document.querySelector('.cancel');
+    if (window.innerWidth > 968) {
+        hamburg.style.opacity = '0';
+        hamburg.style.pointerEvents = 'none';
+        cancel.style.opacity = '0';
+        cancel.style.pointerEvents = 'none';
+    } else {
+        hamburg.style.opacity = '1';
+        hamburg.style.pointerEvents = 'auto';
+        cancel.style.opacity = '0';
+        cancel.style.pointerEvents = 'none';
+    }
+}
+
+window.addEventListener('resize', checkScreenSize);
+window.addEventListener('load', checkScreenSize);
