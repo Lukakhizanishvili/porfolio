@@ -288,6 +288,7 @@ section .main-container{
 .content .typewriter-text{
     color: #b74b4b;
     text-shadow: 0 0 10px #b74b4b;
+
 }
 .content p{
     font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
@@ -697,7 +698,10 @@ footer .text span a:hover{
     font-size: 25px;
 }
 .typewrite span{
-    font-size: 25px;
+    font-size: 18px;
+}
+.typewrite label{
+    font-size: 18px;
 }
 }
 
@@ -761,6 +765,7 @@ footer .text span a:hover{
         text-align: start;
         color: white;
         width: 90%;
+        margin-left: 10%;
         }
         .skills .skills-details {
             width: 80%;
