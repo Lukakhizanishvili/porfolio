@@ -37,36 +37,132 @@ body{
 }
 
 /* nav-bar styling */
-nav{
+nav {
     width: 100%;
     height: 10vh;
+    position: relative;
+    z-index: 1000;
 }
-.nav-container{
+
+.nav-container {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.logo{
+
+.logo {
     color: white;
-    font-size: 2rem;
     font-weight: bold;
+    /* display: flex;
+    width: 200px;
+    justify-content: space-around; */
+    font-size: 18px;
 }
-.logo span{
+
+.logo span {
     color: #b74b4b;
     text-shadow: 0 0 10px #b74b4b;
 }
+
 .hamburg,
-.cancel{
+.cancel {
     cursor: pointer;
     position: absolute;
     right: 15px;
     top: 10px;
     color: white;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+    z-index: 1001;
+}
+
+.hamburg {
+    opacity: 1; /* საწყისად ხილვადი */
+    pointer-events: auto;
+}
+
+.cancel {
+    opacity: 0; /* საწყისად დაფარული */
+    pointer-events: none;
+}
+
+.nav-container .links {
+    display: flex;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #b74b4b;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+.nav-container .links a:hover {
+    color: #b74b4b;
+}
+
+.dropdown {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px black;
+    transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
-    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.dropdown.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
+}
+
+.dropdown .links a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+    background-color: #b74b4b;
+}
+
+.cancel {
+    position: absolute;
+    top: 10px;
+    right: 15px;
 }
 .nav-container .links{
     display: flex;
@@ -182,7 +278,7 @@ section .main-container{
     width: 40%;
 }
 .content h1{
-    font-size: clamp(1rem, 1rem + 5vw,1.8rem);
+    /* font-size: clamp(1rem, 1rem + 5vw,1.8rem); */
 }
 .content h1 span{
     color: #b74b4b;
@@ -195,11 +291,14 @@ section .main-container{
 .content .typewriter-text{
     color: #b74b4b;
     text-shadow: 0 0 10px #b74b4b;
+
 }
 .content p{
     font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
     margin: 10px 0;
+    color: white;
 }
+
 .social-links i{
     display: inline-flex;
     justify-content: center;
@@ -308,9 +407,9 @@ section .topic{
     margin-bottom: 10px;
 }
 .about-details .right p{
-    text-align: justify;
+    text-align: start;
     color: white;
-    width: 50%;
+    width: 90%;
 }
 section .button{
     margin: 16px 0;
@@ -440,12 +539,14 @@ section .button button:hover{
 .contact .content{
     margin: 0 auto;
     padding: 30px 0;
+    
 }
 .contact .text{
     width: 80%;
     text-align: center;
     margin: auto;
 }
+
 footer{
     background:#b74b4b;
     padding: 15px 0;
@@ -503,6 +604,18 @@ footer .text span a:hover{
     }
 }
 @media(max-width:968px){
+    .nav-container .links {
+        display: none;
+    }
+    .hamburg {
+        opacity: 1; /* ხილვადი 968px-ზე და ქვემოთ */
+        pointer-events: auto;
+    }
+    .cancel {
+        opacity: 0; /* დაფარული 968px-ზე და ქვემოთ */
+        pointer-events: none;
+    }
+
     nav .logo{
         position: absolute;
         top: 16px;
@@ -592,17 +705,35 @@ footer .text span a:hover{
     font-size: 25px;
 }
 .typewrite span{
-    font-size: 25px;
+    font-size: 18px;
+}
+.typewrite label{
+    font-size: 18px;
+}
+.hamburg{
+    opacity: 0;
+    pointer-events: none;
 }
 }
 
 
 @media(max-width:500px){
+    .about .left img{
+        height: 25vh;
+    }
+    .nav-container .links {
+        display: none;
+    }
+    /* .hamburg,
+    .cancel {
+        opacity: 0;
+        pointer-events: none; /* გასწორდა visible-დან auto-ზე */
+    */
     .btn{
-   margin-left: 5%; 
-}
+        margin-left: 5%; 
+    }
    .boxes {
-            width: 400px;
+            width: auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -628,6 +759,30 @@ footer .text span a:hover{
         .box .per {
             font-size: 60px;
             color: #b74b4b;
+        }
+        .about .about-details .left {
+        display: flex;
+        justify-content: center;
+        width: 88%;
+        }
+        section .topic {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        margin-left: 10%;
+        } 
+        .about-details .right p {
+        text-align: start;
+        color: white;
+        width: 90%;
+        margin-left: 10%;
+        }
+        .skills .skills-details {
+            width: 80%;
+        }   
+        .container-flex .skills-details .experience {
+            display: none;
         }
     /* საასასსაას */
     .content button {
@@ -661,10 +816,33 @@ footer .text span a:hover{
         font-weight: 200;
 
     }
+    /* .hamburg {
+        opacity: 1;
+        pointer-events: visible;
+    }
+    .cancel {
+        opacity: 1;
+        pointer-events: visible;
+    }
+    */
+    
+
 }
 
 
 @media(max-width:400px){
+    
+    .about .left img{
+        height: 20vh;
+    }
+    .nav-container .links {
+        display: none;
+    }
+    /* .hamburg,
+    .cancel {
+        opacity: 1;
+        pointer-events: auto; /* გასწორდა visible-დან auto-ზე */
+    */
     .social-links{
         width: 100%;
         margin-left: 5%;
@@ -733,5 +911,170 @@ footer .text span a:hover{
         font-weight: 200;
 
     }
-}
+    section .topic {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    }
+    .about-details .right p {
+        text-align: start;
+        color: white;
+        width: 90%;
+    }
+    .skills .skills-details {
+        width: 80%;
+    }
+    .container-flex .skills-details .experience {
+        display: none;
+    }
+    .typewrite label {
+            font-size: 18px;
+        }
+/* .hamburg {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .cancel {
+        opacity: 0;
+        pointer-events: none;
+    } */
 
+
+
+
+
+
+
+
+
+
+
+/* ბურგერი დაკორექტირებული */
+/* nav-bar styling */
+    nav {
+        width: 100%;
+        height: 10vh;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .nav-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .logo span {
+        color: #b74b4b;
+        text-shadow: 0 0 10px #b74b4b;
+    }
+
+    /* .hamburg,
+    .cancel {
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        color: white;
+        font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+        z-index: 1001;
+        transition: opacity 0.3s ease; /* გლუვი გადასვლა */
+
+
+    .nav-container .links {
+        display: flex;
+    }
+
+    .nav-container .links a {
+        position: relative;
+        font-size: 1.2rem;
+        color: white;
+        margin: 0 20px;
+        text-decoration: none;
+        font-weight: 550;
+        transition: 0.3s linear;
+    }
+
+    .nav-container .links a::before {
+        position: absolute;
+        content: "";
+        bottom: -3px;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background-color: #b74b4b;
+        transition: 0.2s linear;
+    }
+
+    .nav-container .links a:hover::before {
+        width: 100%;
+    }
+
+    .nav-container .links a:hover {
+        color: #b74b4b;
+    }
+
+    .dropdown {
+        z-index: 1000;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        height: auto;
+        backdrop-filter: blur(4px) brightness(40%);
+        box-shadow: 0 0 20px black;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+        display: none; /* დაფარული საწყისად */
+    }
+
+    .dropdown.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+        display: block; /* გახსნისას ჩანს */
+    }
+
+    .dropdown .links a {
+        display: flex;
+        color: white;
+        text-decoration: none;
+        justify-content: center;
+        padding: 15px 0;
+        align-items: center;
+        transition: 0.2s linear;
+    }
+
+    .dropdown .links a:hover {
+        background-color: #b74b4b;
+    }
+}
+/* მედია კვირები */
+@media (max-width: 968px) {
+    .nav-container .links {
+        display: none;
+    }
+    .hamburg {
+        display: block; /* ჩანს მხოლოდ 968px-ზე და ქვემოთ */
+    }
+    .cancel {
+        display: none; /* საწყისად დაფარული */
+    }
+    .dropdown {
+        display: none; /* დაფარული, სანამ JavaScript არ გააქტივებს */
+    }
+}

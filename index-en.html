@@ -3,70 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>responsive portfolio website</title>
-    <link rel="stylesheet" href="style-en.css">
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Luka Khizanishvili</title>
+    <link rel="icon" type="image/png" href="./img/letter-l.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <nav>
-        <div class="nav-container">
+        <div class="nav-container" style="display: flex;">
             <div class="logo" data-aos="zoom-in-up">
-                <span>Luka Khizanishvili</span>
+                <!-- <img src="./img/letter-l.png" alt="icon" style="width: 25px;"> -->
+                <span>ლუკა ხიზანიშვილი</span>
+                
             </div>
             <div class="links">
-                <div class="link" data-aos="fade-right"><a href="#">Home</a></div>
-                <div class="link" data-aos="fade-right"><a href="#">About</a></div>
-                <div class="link" data-aos="fade-right"><a href="#">Skills</a></div>
-                <div class="link" data-aos="fade-right"><a href="#">Services</a></div>
-                <div class="link" data-aos="fade-right"><a href="#">Contact</a></div>
+                <div class="link" data-aos="fade-right"><a href="#Home">მთავარი</a></div>
+                <div class="link" data-aos="fade-right"><a href="#About">ჩემს შესახებ</a></div>
+                <div class="link" data-aos="fade-right"><a href="#Skills">უნარები</a></div>
+                <div class="link" data-aos="fade-right"><a href="#Services">სერვისები</a></div>
+                <div class="link" data-aos="fade-right"><a href="#Contact">დამიკავშირდი</a></div>
+                <div class="link" data-aos="fade-right">
+                    <a href="index.html">
+                        <img src="./img/georgia.png" alt="Georgia-flag" style="width: 20px;">
+                    </a>
+                    <a href="index-en.html">
+                        <img src="./img/united-states-of-america.png" alt="USA-flag" style="width: 20px;">
+                    </a>
+                </div>
             </div>
             <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         </div>
         <div class="dropdown">
-            <!-- <div class="links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Skills</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+            <div class="links">
+                <a href="#Home" data-aos="fade-right">მთავარი</a>
+                <a href="#About" data-aos="fade-right">ჩემს შესახებ</a>
+                <a href="#Skills" data-aos="fade-right">უნარები</a>
+                <a href="#Services" data-aos="fade-right">სერვისები</a>
+                <a href="#Contact" data-aos="fade-right">დამიკავშირდი</a>
+                <div class="link" data-aos="fade-right">
+                    <a href="index.html">
+                        <img src="./img/georgia.png" alt="Georgia-flag" style="width: 20px;">
+                    </a>
+                    <a href="index-en.html">
+                        <img src="./img/united-states-of-america.png" alt="USA-flag" style="width: 20px;">
+                    </a>
+                </div>
                 <i class="fa-solid fa-xmark cancel" onclick="hamburg()"></i>
-            </div> -->
+            </div>
             <nav>
                 <div class="menu-icon" onclick="hamburg()">
                     <i class="fa-solid fa-bars hamburg"></i>
                 </div>
                 <ul id="menu" class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <a href="#Home">მთავარი</a>
+                    <a href="#About">ჩემს შესახებ</a>
+                    <a href="#Skills">უნარები</a>
+                    <a href="#Services">სერვისები</a>
+                    <a href="#Contact">დამიკავშირდი</a>
                 </ul>
             </nav>
         </div>
     </nav>
-    <section>
+    <section id="Home">
         <div class="main-container">
             <div class="image">
                 <img src="./img/main-img-1.jpg" alt="main-img-1">
             </div>
             <div class="content">
                 <h1 data-aos="fade-left">
-                    Hey I'm
-                    <span>Luka</span>
+                    გამარჯობა, მე ვარ 
+                    <span>ლუკა</span>
                 </h1>
                 <div class="typewrite">
-                    <label for="">I am </label>
+                    <label for="">პროფესიით: </label>
                     <span class="typewriter-text" data-aos="fade-up"
                             data-aos-duration="3000" id="intensText"></span>                    
                 </div>
                 <p  data-aos="fade-down"
                     data-aos-easing="linear"
                     data-aos-duration="1500">
-                    Lorem ipsum dolor sit amet consectetur, 
-                    adipisicing elit. Quasi laboriosam quas laudantium eos, 
-                    ab aliquid odio unde iusto expedita dicta natus deserunt quos 
-                    id officia blanditiis ea repudiandae nulla iure.
+                     ვქმნი თანამედროვე, სწრაფ და მობილურ მოწყობილობებზე მორგებულ ვებსაიტებს,
+                     რომლებიც ზრდის ბრენდის სანდოობას და რეალურ გაყიდვებს.
                 </p>
                 <div class="social-links">
                     <a href="https://github.com/Lukakhizanishvili">
@@ -83,7 +101,7 @@
                     </a>
                 </div>
                 <div class="btn" id="contactMeJs">
-                    <button>Contact me</button>
+                    <button>დამიკავშირდი</button>
                 </div>
             </div>
         </div>
@@ -91,12 +109,12 @@
 
 <!-- section start -->
 
-    <section class="about" id="about">
+    <section class="about" id="About">
         <div class="content">
             <div class="title"  data-aos="fade-right"
                                 data-aos-offset="300"
                                 data-aos-easing="ease-in-sine">
-                    <span>About Me</span>
+                    <span>ჩემს შესახებ</span>
             </div>
                 <div class="about-details">
                     <div class="left">
@@ -104,14 +122,18 @@
                     </div>
             
                     <div class="right">
-                        <div class="topic">Designing is My Passion</div>
+                        <div class="topic">სწრაფი, დახვეწილი და მობილურზე მორგებული ვებსაიტები.</div>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti praesentium, sit molestiae quod quos nobis asperiores tempora ex illum dicta esse 
-                            facere veritatis libero, vero odio enim eligendi, error adipisci!
+                            მე ვარ ლუკა ხიზანიშვილი — ვებ დეველოპერი HTML, CSS, JavaScript და React ტექნოლოგიებით.
+                            ჩემთვის მთავარი არის ისეთი გამოცდილების შექმნა, რომელიც მარტივად მოსახმარია,
+                            ვიზუალურად გამართულია და ბიზნესს აძლევს შედეგს.
+                            პროექტზე მუშაობისას ყურადღებას ვაქცევ სისწრაფეს, ხელმისაწვდომობას,
+                            საძიებო სისტემებისთვის ოპტიმიზაციას (SEO) და სუფთა კოდს,
+                            რათა საიტი სტაბილურად იმუშაოს მომავალშიც.
                         </p>
                         <div class="button">
                             <a id="downloadCv" href="./download/Luka_Khizanishvili_CV.pdf" download="Luka_Khizanishvili_CV.pdf">
-                                <button>Download CV</button>  
+                                <button>გადმოწერე CV</button>  
                             </a>
                             
                         </div>
@@ -123,29 +145,34 @@
 
 <!-- skill section -->
 
-<section class="skills" id="skills">
+<section class="skills" id="Skills">
     
     <div class="content">
         <div class="title"  data-aos="fade-right"
                             data-aos-offset="300"
                             data-aos-easing="ease-in-sine">
-                <span>My Skills</span>
+                <span>უნარები</span>
         </div>
         <div class="container-flex">
             <div class="skills-details">
                 <div class="text">
                     <div class="topic">
-                        skill Reflects Our Knowledge
+                        უნარები, რომლებიც გამოხატავს ჩვენს ცოდნას
                     </div>
                 </div>
-                <p data-aos="fade-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid commodi impedit, magni tempore eos optio deleniti pariatur error eum nihil illum quaerat cumque nobis 
-                    nulla, officia repudiandae, vitae voluptatum dolorem.
+                <p data-aos="fade-right">
+                            ვებ დეველოპმენტი ჩემთვის მხოლოდ კოდის დაწერა არ არის — ეს არის შემოქმედებითი
+                        პროცესი, სადაც ვაერთიანებ დიზაინს, ტექნოლოგიას და მომხმარებლის საჭიროებებს.
+                        მაქვს ცოდნა HTML, CSS, JavaScript და React-ში, რაც მაძლევს საშუალებას
+                        შევქმნა თანამედროვე, სწრაფი და მობილურზე მორგებული ვებსაიტები.
+                        ჩემი მიზანია თითოეული პროექტი იყოს უნიკალური და მოიტანდეს რეალურ შედეგს
+                        ბიზნესისთვის.
                 </p>
                 <div class="experience">
-                    <div class="num">10</div>
+                    <div class="num">5</div>
                     <div class="exp">
-                        Years of<br/>
-                        experience
+                        წლიანი<br/>
+                        გამოცდილება
                     </div>
                 </div>
             </div>
@@ -175,12 +202,12 @@
 
 <!-- My services section start -->
 
-<section class="services" id="services">
+<section class="services" id="Services">
     <div class="content">
         <div class="title"  data-aos="fade-right"
                             data-aos-offset="300"
                             data-aos-easing="ease-in-sine">
-                <span>My Services</span>
+                <span>ჩემი სერვისები</span>
         </div>
         <div class="boxes">
             <div class="box"    data-aos="fade-up"
@@ -188,10 +215,11 @@
                 <div class="icon">
                     <i class="fas fa-desktop"></i>
                 </div>
-                <div class="topic">Web Development</div>
+                <div class="topic">ვებ დეველოპმენტი</div>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo libero aut at quia, vero accusamus obcaecati id dolore, corrupti, ducimus nulla tempora dolorem? 
-                    Repudiandae eius minus ullam nulla est porro?
+                    ვქმნი თანამედროვე, სწრაფ და მობილურზე მორგებულ ვებსაიტებს, რომლებიც
+                    არა მხოლოდ ვიზუალურადაა მიმზიდველი, არამედ შედეგსაც მოაქვს.
+                    გამოყენებულია უახლესი ტექნოლოგიები და სტანდარტები.
                 </p>
             </div>
             <div class="box" data-aos="fade-up"
@@ -199,40 +227,56 @@
                 <div class="icon">
                     <i class="fas fa-paint-brush"></i>
                 </div>
-                <div class="topic">Graphic Design</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum reiciendis rerum, nobis repellat deserunt ipsam ea, aliquid quidem vel, debitis unde nostrum officiis error excepturi labore nesciunt laborum provident magni.</p>
+                <div class="topic">გრაფიკული დიზაინი</div>
+                <p>
+                    ბრენდინგის ელემენტებიდან დაწყებული UI/UX დიზაინამდე —
+                    ვქმნი ვიზუალურ იდენტობას, რომელიც თქვენს ბიზნესს გამორჩეულს ხდის.
+                </p>
             </div>
             <div class="box"    data-aos="fade-up"
                                 data-aos-anchor-placement="center-bottom">
                 <div class="icon">
                     <i class="fas fa-chart-line"></i>
                 </div>
-                <div class="topic">Digital Marketing</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum reiciendis rerum, nobis repellat deserunt ipsam ea, aliquid quidem vel, debitis unde nostrum officiis error excepturi labore nesciunt laborum provident magni.</p>
+                <div class="topic">დიჯიტალ მარკეტინგ</div>
+                <p>
+                    ვეხმარები თქვენს ბიზნესს ონლაინ სივრცეში სწორი სტრატეგიით:
+                    SEO, სოციალური მედია და რეკლამა — 
+                    შედეგზე ორიენტირებული მიდგომით.
+                </p>
             </div>
              <div class="box"   data-aos="fade-up"
                                 data-aos-anchor-placement="center-bottom">
                 <div class="icon">
                     <i class="fas fa-chart-line"></i>
                 </div>
-                <div class="topic">Icon Design</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum reiciendis rerum, nobis repellat deserunt ipsam ea, aliquid quidem vel, debitis unde nostrum officiis error excepturi labore nesciunt laborum provident magni.</p>
+                <div class="topic">ლოგოს დიზაინი</div>
+                <p>
+                    ვქმნი უნიკალურ, მარტივად ამოსაცნობ და ბრენდთან შეთავსებულ
+                    ლოგოებს, რომლებიც თქვენს პროდუქტს თანამედროვე იერს აძლევს.
+                </p>
             </div>
             <div class="box"    data-aos="fade-up"
                                 data-aos-anchor-placement="center-bottom">
                 <div class="icon">
                     <i class="fas fa-camera-retro"></i>
                 </div>
-                <div class="topic">photograpy</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum reiciendis rerum, nobis repellat deserunt ipsam ea, aliquid quidem vel, debitis unde nostrum officiis error excepturi labore nesciunt laborum provident magni.</p>
+                <div class="topic">თრაბელშუთინგი</div>
+                <p>
+                    აღნიშნული სერვისი მოიცავს, ქსელში არსებული პრობლემის მოკვლევასა და მის აღმოფხვრას.
+                    მოკლე დროში უმაღლესი სტანდარტის შესაბამისად.
+                </p>
             </div>
             <div class="box"    data-aos="fade-up"
                                 data-aos-anchor-placement="center-bottom">
                 <div class="icon">
                     <i class="fas fa-tablet-alt"></i>
                 </div>
-                <div class="topic">apps Development</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum reiciendis rerum, nobis repellat deserunt ipsam ea, aliquid quidem vel, debitis unde nostrum officiis error excepturi labore nesciunt laborum provident magni.</p>
+                <div class="topic">ქსელის ინჟინერია</div>
+                <p>
+                    აღნიშნული სერვისი შეგიძლიათ ისარგებლოთ, თუ გსურთ ქსელის მოწყობა - კამერების ინტალაცია,
+                    ap-ის ინტეგრაცია wi-fi სიხშირის გაძლიერება,  და სხვა ქსელთან დაკავშირებული სერვისების განხორციელება.
+                </p>
             </div>
         </div>
     </div>
@@ -240,20 +284,21 @@
 </section>
 
 <!-- Contact Me section start -->
- <section class="contact" id="contact">
+ <section class="contact" id="Contact">
     <div class="content">
         <div class="title"  data-aos="fade-right"
                             data-aos-offset="300"
                             data-aos-easing="ease-in-sine">
-            <span>Contact Me</span>
+            <span>დამიკავშირდი</span>
         </div>
         <div class="text">
-            <div class="topic">Have Any Project?</div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At maxime quod ab natus ullam omnis eius eos, tempore perferendis aperiam sunt, quia quo sapiente, 
-                incidunt itaque velit? Ratione, nemo omnis!
+            <div class="topic">გაქვს პროექტი?</div>
+            <p style="color: white;">
+                გჭირდება საიტი, აპლიკაცია ან ციფრული გადაწყვეტა? ერთად შევქმნათ თანამედროვე, 
+                ხარისხიანი და ინოვაციური პროდუქტი, რომელიც შენს იდეებს ახალ დონეზე აიყვანს.
             </p>
-            <div class="button">
-                <button>Let's Chat</button>
+            <div class="button" id="whatsappButton">
+                <button>მომწერე</button>
             </div>
         </div>
     </div>
@@ -263,7 +308,7 @@
 
 <footer>
     <div class="text">
-        <span>Created By <a href="#">Luka Khizanishvili</a> | 2025 All Right Reserved </span>
+        <span>Created By <a href="#Home">Luka Khizanishvili</a> | © 2026 All Right Reserved </span>
     </div>
 </footer>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
