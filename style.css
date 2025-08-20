@@ -703,17 +703,20 @@ footer .text span a:hover{
 
 
 @media(max-width:500px){
+    .about .left img{
+        height: 25vh;
+    }
     .nav-container .links {
         display: none;
     }
     .hamburg,
     .cancel {
-        opacity: 1;
-        pointer-events: auto; /* გასწორდა visible-დან auto-ზე */
+        opacity: 0;
+        pointer-events: none; /* გასწორდა visible-დან auto-ზე */
     }
     .btn{
-   margin-left: 5%; 
-}
+        margin-left: 5%; 
+    }
    .boxes {
             width: auto;
             display: flex;
@@ -802,14 +805,19 @@ footer .text span a:hover{
         pointer-events: auto;
     }
     .cancel {
-        opacity: 0;
-        pointer-events: none;
+        opacity: 1;
+        pointer-events: visible;
     }
+    
 
 }
 
 
 @media(max-width:400px){
+    
+    .about .left img{
+        height: 20vh;
+    }
     .nav-container .links {
         display: none;
     }
