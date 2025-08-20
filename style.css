@@ -293,7 +293,9 @@ section .main-container{
 .content p{
     font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
     margin: 10px 0;
+    color: white;
 }
+
 .social-links i{
     display: inline-flex;
     justify-content: center;
@@ -534,12 +536,14 @@ section .button button:hover{
 .contact .content{
     margin: 0 auto;
     padding: 30px 0;
+    
 }
 .contact .text{
     width: 80%;
     text-align: center;
     margin: auto;
 }
+
 footer{
     background:#b74b4b;
     padding: 15px 0;
