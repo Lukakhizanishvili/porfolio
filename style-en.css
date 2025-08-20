@@ -828,7 +828,12 @@ footer .text span a:hover{
     
 
 }
-
+@media (max-width: 450px) {
+    .social-links {
+        /* margin-left: 10%; */
+        margin-top: 10%;
+    }
+}
 
 @media(max-width:400px){
     .social-links {
