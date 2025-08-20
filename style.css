@@ -401,9 +401,9 @@ section .topic{
     margin-bottom: 10px;
 }
 .about-details .right p{
-    text-align: justify;
+    text-align: start;
     color: white;
-    width: 50%;
+    width: 90%;
 }
 section .button{
     margin: 16px 0;
@@ -755,9 +755,9 @@ footer .text span a:hover{
         margin-left: 10%;
         } 
         .about-details .right p {
-        text-align: justify;
+        text-align: start;
         color: white;
-        width: 83%;
+        width: 90%;
         }
         .skills .skills-details {
             width: 80%;
@@ -894,9 +894,9 @@ footer .text span a:hover{
     margin-left: 10%;
 }
 .about-details .right p {
-    text-align: center;
+    text-align: start;
     color: white;
-    width: 88%;
+    width: 90%;
 }
 .skills .skills-details {
     width: 80%;
