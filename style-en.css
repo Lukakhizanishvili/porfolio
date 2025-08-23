@@ -719,7 +719,7 @@ footer .text span a:hover{
 
 @media(max-width:500px){
     .about .left img{
-        height: 25vh;
+        height: 35vh;
     }
     .nav-container .links {
         display: none;
@@ -840,7 +840,7 @@ footer .text span a:hover{
         margin-left: 0;
     }
     .about .left img{
-        height: 20vh;
+        height: 35vh;
     }
     .nav-container .links {
         display: none;
